@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btnvalue="button" />
+	</body>
+</html>
+<script src="js1/jquery.min.js"></script>
+<script>
+    let obj = {}
+    $("#btn").click(function () {
+        $.ajax({
+            url : "https://resources.ninghao.net/wxapp-case/db.json",
+            success : (response) => {
+                console.log("请求的数据:" + response)
+                Object.assign(obj,response);
+                console.log( obj)
+            }
+        })
+    });
+</script>
